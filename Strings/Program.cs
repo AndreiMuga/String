@@ -6,7 +6,8 @@ public static class Program
     public static void Main()
     {
         //Declare strings
-        string myFirstString = "Hello world again! ";
+        string myFirstString = "Hello world again!!! ";
+        Console.WriteLine("Hello again");
         Console.WriteLine(myFirstString);
 
         int myNumber = 42;

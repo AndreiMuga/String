@@ -1,2 +1,2 @@
 # String
-String Laboratorul 6
+String Laboratorul 5

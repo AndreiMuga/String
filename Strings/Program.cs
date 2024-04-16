@@ -122,6 +122,14 @@ public static class Program
         Console.WriteLine(stringBuilder.ToString());
         stopWatch.Stop();
         Console.WriteLine(stopWatch.Elapsed.TotalSeconds.ToString());
+
+        //String Formatting
+        double d = 0.375;
+        string infoToDisplay = d.ToString("P2");
+        Console.WriteLine(infoToDisplay);
+
+        string myFormatterdString = String.Format("{0}", d);
+        Console.WriteLine(myFormatterdString);
     }
 
 }

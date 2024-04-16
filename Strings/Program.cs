@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Globalization;
 using System.Text;
 
 public static class Program
@@ -128,8 +129,27 @@ public static class Program
         string infoToDisplay = d.ToString("P2");
         Console.WriteLine(infoToDisplay);
 
-        string myFormatterdString = String.Format("{0}", d);
+        string myFormatterdString = String.Format("{0:F5}", d);
         Console.WriteLine(myFormatterdString);
+
+        //Datetime
+
+        DateTime myDate = DateTime.Now;
+        Console.WriteLine(myDate);
+
+        var myFormattedDate = string.Format("{0:d.MM.yyyy HH:mm}", myDate);
+        Console.WriteLine(myFormattedDate);
+
+        CultureInfo culture = new CultureInfo("ro-Ro");
+        Console.WriteLine(myDate.ToString("d", culture));
+
+        string myDate2 = "01.05.2024";
+        
+        var tommorow =myDate.AddDays(1);
+        //var yesterday = myDate2.Add(-1); //this isn`t possible.
+        DateTime futureDate = DateTime.ParseExact(myDate2, "dd.MM.dddd", CultureInfo.InvariantCulture);
+        var yesterday = futureDate.AddDays(-1);
+
     }
 
 }

@@ -147,8 +147,36 @@ public static class Program
         
         var tommorow =myDate.AddDays(1);
         //var yesterday = myDate2.Add(-1); //this isn`t possible.
-        DateTime futureDate = DateTime.ParseExact(myDate2, "dd.MM.dddd", CultureInfo.InvariantCulture);
+        DateTime futureDate = DateTime.ParseExact(myDate2, "dd.MM.yyyy", CultureInfo.InvariantCulture);
         var yesterday = futureDate.AddDays(-1);
+
+
+        //String interpolation
+        string student = "John";
+        string age = "25";
+        string str = $"Studentu {student} is {age} old.";
+
+        string myStudent = "John is \"the best \".";//escaping character
+        string myStudent2 = "John is 'the best'."; //using single quote
+        string verbatimStudent = @"john is ""the best""";
+
+        string spacedString = "this is my syoer " + "long string ";
+        string verbatimString = @"this
+is
+my syoer
+long 
+string";
+        Console.WriteLine("Enter your text using quotes:");
+        string quote = Console.ReadLine();
+        //Console.WriteLine(quote);
+
+
+        //3 things to remember
+        //are immutable
+        //have a reference type
+       
+
+
 
     }
 
